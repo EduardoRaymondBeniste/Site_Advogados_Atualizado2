@@ -35,3 +35,4 @@ Inclui dados de exemplo (admin, cliente, advogado e plano Hotmart). Substitua as
 4. Criar camada de autenticação com `express-session` + verificações `isAuthenticated`.
 5. Adicionar testes e validações de input no backend e no front (EJS + client-side).
 # Site_Advogados_Atualizado
+# Site_Advogados_Atualizado2
