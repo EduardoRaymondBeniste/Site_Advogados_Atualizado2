@@ -1,0 +1,39 @@
+﻿<% var title = 'Cadastre-se | Adv Turbo'; %>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('../partials/head', { title: title }) %>
+  <body>
+    <%- include('../partials/navbar') %>
+    <section class="container" style="padding-top: 10rem; padding-bottom: 4rem;">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow-lg p-4">
+            <h3 class="mb-4 fw-bold">Cadastro Rápido</h3>
+            <% if (message) { %>
+              <div class="alert alert-success"><%= message %></div>
+            <% } %>
+            <form action="/cadastrar" method="post">
+              <div class="mb-3">
+                <label class="form-label">Nome completo</label>
+                <input name="fullname" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Tipo</label>
+                <select name="type" class="form-select">
+                  <option value="cliente">Cliente</option>
+                  <option value="advogado">Advogado</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Contato</label>
+                <input name="phone" class="form-control" placeholder="Whatsapp" />
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
